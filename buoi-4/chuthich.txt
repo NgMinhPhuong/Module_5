@@ -1,0 +1,4 @@
+ Các bạn soạn bài trả lời các câu hỏi sau:
+1.        React Hooks là gì? Tại sao phải cần dùng hooks
+2.        useState hook khi nào dùng? Cách triển khai useState hook
+3.        useEffect hook khi nào dùng ? Cách triển khai useEffect hook

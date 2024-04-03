@@ -1,0 +1,6 @@
+Các bạn soạn bài ngày mai theo các câu hỏi bên dưới nhé:
+1.        React Components là gì? Các cách tạo?
+2.        Cách triển khai Props?
+3.        Pure function là gì? Ý nghĩa của việc sử dụng pure function?
+4.        Triển khai state trong ReactJS?
+5.        Tìm hiểu về Component Life Cycle Method?

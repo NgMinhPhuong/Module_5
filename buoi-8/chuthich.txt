@@ -1,0 +1,4 @@
+•        Next.js là gì?
+•        Kể tên các tính năng của Next.js?
+•        Phân biệt static generation (SSG) và server-side rendering (SSR/Universal)
+•        Tạo demo 1 dự án bằng Next.js

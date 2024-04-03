@@ -1,0 +1,7 @@
+Redux là gì? Tại sao phải sử dụng redux?
+•        Các thành phần chính của redux? Flow hoạt động của redux?
+•        Giải thích chức năng của các thành phần bên dưới:
+o        Redux Actions
+o        Redux Reducer
+o        Redux Store
+o        Redux Middleware
