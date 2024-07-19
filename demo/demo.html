@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script>
+        function create(){
+            console.log(localStorage.getItem('accessToken'));
+            $.ajax({
+                url:'https://api.vimeo.com/me/videos',
+                type: 'post',
+                headers: {
+                    Authorization: 'Brearer ' + localStorage.getItem('accessToken'),
+                    "Content-Type": "application/json",
+                    Accept: 'application/vnd.vimeo.*+json;version=3.4'
+                },
+                success: function(response){
+                    console.log(response);
+                }
+            })
+        }
+      var clientId = "0c7fd392722f7208cf6045c8503007370459ce1c";
+      var clientSecret =
+        "Qspp+1cdTTXx+j87+zorGXyXybLPjE/32ycHj0/fPymL3QjqPZ9pka3/Vh2pNogFZ/fKnD2Mm2Z+zjNd0+6yRwE/CBAdXtLyGTldA7Fwn84InoifsV/h+m1VyAjhIvjd";
+      var url = "https://api.vimeo.com/oauth/authorize/client";
+      var authHeaderValue = "Basic " + btoa(clientId + ":" + clientSecret);
+        
+      $.ajax({
+        url: url,
+        type: "post",
+        headers: {
+          Authorization: authHeaderValue,
+          "Content-Type": "application/json",
+          Accept: "application/vnd.vimeo.*+json;version=3.4",
+        },
+        data: JSON.stringify({
+          grant_type: "client_credentials",
+          scope: "public",
+        }),
+        success: function (response) {
+          // Xử lý phản hồi thành công ở đây
+          console.log(response);
+        },
+        error: function (xhr, status, error) {
+          // Xử lý khi có lỗi xảy ra
+          console.error(error);
+        },
+      });
+    </script>
+    <!-- <a href="https://accounts.google.com/o/oauth2/auth?scope=profile&redirect_uri=http://127.0.0.1:5500/demo/demo.html&response_type=code
+    &client_id=522174800788-00t0dju48b4tpc3athpqd4s63siipgo0.apps.googleusercontent.com&approval_prompt=force">Lick Me</a> -->
+  </body>
+</html>
